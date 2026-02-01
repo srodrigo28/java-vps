@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TreinaDev Labs | Java 21 Spring Boot</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <meta name="theme-color" content="#0f172a" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700;900&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    pre, code { font-family: 'Fira Code', monospace; }
-    
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0f172a; }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-    html { scroll-behavior: smooth; }
-    .fade-in { animation: fadeIn 0.5s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* Gradiente Java */
-    .bg-java { background: linear-gradient(135deg, #f89820 0%, #e76f00 100%); }
+    .bg-java {
+      background: linear-gradient(135deg, #f89820 0%, #e76f00 100%);
+    }
   </style>
 </head>
 
@@ -38,52 +76,62 @@
           <i class="fa-brands fa-java text-[#f89820] text-2xl font-bold"></i>
         </div>
         <div>
-          <h1 class="font-black text-white text-lg italic tracking-tighter uppercase">TreinaDev <span class="text-[#f89820]">Java</span></h1>
-          <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Deploy Guide v2</p>
+          <h1 class="font-black text-white text-lg italic tracking-tighter uppercase">TreinaDev <span
+              class="text-[#f89820]">Java</span></h1>
+          <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Master Guide</p>
         </div>
       </div>
     </div>
 
     <nav class="flex-1 overflow-y-auto p-4 space-y-2">
-      <div class="px-3 pb-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest">Fluxo Inicial</div>
+      <div class="px-3 pb-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest">Instalação</div>
 
-      <button onclick="scrollToSection('passo1')" class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
-        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-[#f89820] font-bold">1</span>
+      <button onclick="scrollToSection('passo1')"
+        class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
+        <span
+          class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-[#f89820] font-bold">1</span>
         Local: Dockerfile
       </button>
-      <button onclick="scrollToSection('passo2')" class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
-        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-white font-bold"><i class="fa-brands fa-github"></i></span>
-        Local: Git Push
-      </button>
-      <button onclick="scrollToSection('passo3')" class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
-        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-violet-500 font-bold">3</span>
+      <button onclick="scrollToSection('passo2')"
+        class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
+        <span
+          class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-violet-500 font-bold">2</span>
         VPS: Clone & Compose
       </button>
-      <button onclick="scrollToSection('passo4')" class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
-        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-cyan-500 font-bold">4</span>
-        VPS: DNS & Nginx
+      <button onclick="scrollToSection('passo3')"
+        class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
+        <span
+          class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-cyan-500 font-bold">3</span>
+        VPS: Nginx (SSL)
       </button>
 
-      <div class="mt-6 px-3 pb-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-t border-slate-800 pt-4">Dia a Dia</div>
-      
-      <button onclick="scrollToSection('update')" class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
-        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-green-500 font-bold"><i class="fa-solid fa-rotate"></i></span>
-        Como Atualizar
+      <div
+        class="mt-6 px-3 pb-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest border-t border-slate-800 pt-4">
+        Manutenção Diária</div>
+
+      <button onclick="scrollToSection('update')"
+        class="w-full text-left flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors">
+        <span class="w-6 h-6 rounded bg-slate-800 flex items-center justify-center text-xs text-green-500 font-bold"><i
+            class="fa-solid fa-sync-alt"></i></span>
+        Como Atualizar (Importante)
       </button>
     </nav>
   </aside>
 
   <div class="flex-1 flex flex-col h-screen overflow-hidden relative lg:ml-72">
-    
+
     <main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12 scroll-smooth" id="mainScroll">
-      
+
       <section class="mb-12">
         <div class="bg-java rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-white/10">
           <div class="relative z-10 max-w-2xl">
-            <span class="inline-block py-1 px-3 rounded-full bg-black/20 border border-white/20 text-xs font-bold text-white mb-4 uppercase tracking-wider">Spring Boot 3</span>
-            <h1 class="text-3xl md:text-5xl font-black text-white mb-4 italic tracking-tight uppercase">Java 21 VPS Deploy</h1>
+            <span
+              class="inline-block py-1 px-3 rounded-full bg-black/20 border border-white/20 text-xs font-bold text-white mb-4 uppercase tracking-wider">Spring
+              Boot 3</span>
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4 italic tracking-tight uppercase">Java 21 VPS
+              Deploy</h1>
             <p class="text-white/90 text-lg leading-relaxed">
-              Procedimento oficial para criar aplicações Java com Docker Multi-Stage Build, clonar do GitHub e expor via Hostinger.
+              Guia completo com Docker Multi-Stage Build, configuração de SSL no Nginx e fluxo de atualização contínua.
             </p>
           </div>
           <i class="fa-brands fa-java absolute -right-5 -bottom-10 text-[16rem] text-white opacity-10 rotate-12"></i>
@@ -93,16 +141,16 @@
       <div id="passo1" class="space-y-6 mb-16 fade-in">
         <div class="flex items-center gap-4 mb-6">
           <span class="w-12 h-1 bg-[#f89820] rounded-full"></span>
-          <h2 class="text-xl font-bold text-[#f89820] uppercase tracking-widest">1. Arquivo Dockerfile (No Windows)</h2>
+          <h2 class="text-xl font-bold text-[#f89820] uppercase tracking-widest">1. Preparação (Dockerfile)</h2>
         </div>
 
         <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden p-6">
-            <p class="text-sm text-slate-400 mb-4">Crie um arquivo chamado <code>Dockerfile</code> (sem extensão) na raiz do seu projeto. Ele usa Maven para compilar e JRE para rodar.</p>
-            
-            <div class="bg-black p-5 rounded-xl border-l-4 border-[#f89820] relative">
-                <button onclick="copyToClipboard(document.getElementById('dockerCode').innerText)" class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
-                <pre id="dockerCode" class="text-xs text-slate-300 overflow-x-auto leading-relaxed">
-# Estágio 1: Build (Maven + JDK 21)
+          <p class="text-sm text-slate-400 mb-4">Garanta que este arquivo esteja na raiz do projeto antes de dar
+            <code>git push</code>.</p>
+          <div class="bg-black p-5 rounded-xl border-l-4 border-[#f89820] relative">
+            <button onclick="copyToClipboard(document.getElementById('dockerCode').innerText)"
+              class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
+            <pre id="dockerCode" class="text-xs text-slate-300 overflow-x-auto leading-relaxed">
 FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
@@ -110,52 +158,37 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Estágio 2: Run (Apenas JRE Leve)
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]</pre>
-            </div>
+          </div>
         </article>
       </div>
 
       <div id="passo2" class="space-y-6 mb-16 fade-in">
         <div class="flex items-center gap-4 mb-6">
-          <span class="w-12 h-1 bg-white rounded-full"></span>
-          <h2 class="text-xl font-bold text-white uppercase tracking-widest">2. Subir código (GitHub)</h2>
-        </div>
-
-        <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden p-6">
-            <p class="text-sm text-slate-400 mb-4">No terminal do seu VS Code, envie as alterações para nuvem.</p>
-            <div class="bg-black p-4 rounded-xl font-mono text-xs text-green-400 border border-slate-700">
-                <p class="mb-2">git add .</p>
-                <p class="mb-2">git commit -m "Config Dockerfile Java"</p>
-                <p>git push origin master</p>
-            </div>
-        </article>
-      </div>
-
-      <div id="passo3" class="space-y-6 mb-16 fade-in">
-        <div class="flex items-center gap-4 mb-6">
           <span class="w-12 h-1 bg-violet-600 rounded-full"></span>
-          <h2 class="text-xl font-bold text-violet-500 uppercase tracking-widest">3. Configurar VPS (Clone & Build)</h2>
+          <h2 class="text-xl font-bold text-violet-500 uppercase tracking-widest">2. VPS (Clone & Compose)</h2>
         </div>
 
         <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden p-6">
-            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-terminal text-violet-500"></i> Passo A: Clonar o Projeto</h3>
-            <div class="bg-black p-4 rounded-xl border-l-4 border-violet-500 mb-6">
-                <code class="text-xs text-violet-300 block mb-2">cd /root/infra-proxy</code>
-                <code class="text-xs text-white block">git clone https://github.com/srodrigo28/java-vps.git</code>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xs font-bold text-slate-500 uppercase mb-2">1. Clonar (Só 1ª vez)</h3>
+              <code class="block bg-black p-3 rounded text-xs text-violet-300 border border-slate-800">
+                        cd /root/infra-proxy<br>
+                        git clone https://github.com/srodrigo28/java-vps.git
+                    </code>
             </div>
-
-            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-file-pen text-violet-500"></i> Passo B: Editar Docker Compose</h3>
-            <p class="text-xs text-slate-400 mb-2">Edite o arquivo <code>nano docker-compose.yml</code> e adicione o serviço:</p>
-            
-            <div class="bg-black p-4 rounded-xl border border-slate-700 relative mb-6">
-                <button onclick="copyToClipboard(document.getElementById('composeCode').innerText)" class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
-                <pre id="composeCode" class="text-xs text-slate-300 overflow-x-auto">
-  # --- SEU APP JAVA (Repo: java-vps) ---
+            <div>
+              <h3 class="text-xs font-bold text-slate-500 uppercase mb-2">2. Docker Compose (Add Serviço)</h3>
+              <div class="bg-black p-3 rounded text-xs text-slate-300 border border-slate-800 relative">
+                <button onclick="copyToClipboard(document.getElementById('composeCode').innerText)"
+                  class="absolute top-2 right-2 text-slate-500 hover:text-white"><i
+                    class="fa-regular fa-copy"></i></button>
+                <pre id="composeCode">
   app-java:
     build: ./java-vps
     container_name: java-producao
@@ -164,40 +197,94 @@ ENTRYPOINT ["java", "-jar", "app.jar"]</pre>
       - SPRING_PROFILES_ACTIVE=prod
     networks:
       - rede_interna</pre>
+              </div>
             </div>
-
-            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-play text-green-500"></i> Passo C: Subir e Compilar</h3>
-            <div class="bg-slate-950 p-4 rounded-xl border border-green-900/50">
-                <code class="text-sm text-green-400 font-bold">docker compose up -d --build</code>
-            </div>
+          </div>
+          <div class="mt-4 bg-slate-950 p-3 rounded border border-violet-900/30 text-center">
+            <code class="text-sm text-violet-400 font-bold">docker compose up -d --build</code>
+          </div>
         </article>
       </div>
 
-       <div id="passo4" class="space-y-6 mb-20 fade-in">
+      <div id="passo3" class="space-y-6 mb-20 fade-in">
         <div class="flex items-center gap-4 mb-6">
           <span class="w-12 h-1 bg-cyan-600 rounded-full"></span>
-          <h2 class="text-xl font-bold text-cyan-500 uppercase tracking-widest">4. Inauguração (DNS & Nginx)</h2>
+          <h2 class="text-xl font-bold text-cyan-500 uppercase tracking-widest">3. Configuração Final Nginx (SSL)</h2>
         </div>
 
-        <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden p-6 mb-6">
-            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-globe text-cyan-500"></i> A. Hostinger (Zona DNS)</h3>
-            <p class="text-sm text-slate-400 mb-4">Crie o registro para a internet encontrar sua VPS.</p>
-             <div class="grid grid-cols-3 gap-2 text-center text-xs font-mono bg-black p-4 rounded-lg">
-                 <div class="text-slate-500">TIPO</div>
-                 <div class="text-slate-500">NOME</div>
-                 <div class="text-slate-500">ALVO</div>
-                 <div class="text-white font-bold">A</div>
-                 <div class="text-white font-bold">java</div>
-                 <div class="text-violet-400 font-bold">76.13.225.77</div>
-             </div>
-        </article>
-
         <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-            <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-lock text-cyan-500"></i> B. Nginx + SSL</h3>
-            <p class="text-sm text-slate-400 mb-4">Adicione ao <code>nano conf/default.conf</code>:</p>
-            <div class="bg-black p-4 rounded-xl border-l-4 border-cyan-500 mb-6 relative">
-                 <button onclick="copyToClipboard(document.getElementById('nginxCode').innerText)" class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
-                <pre id="nginxCode" class="text-xs text-slate-300 overflow-x-auto">
+          <div class="bg-cyan-900/10 p-4 rounded-xl border border-cyan-500/20 mb-6 flex gap-3 items-center">
+            <i class="fa-solid fa-triangle-exclamation text-cyan-400 text-xl"></i>
+            <p class="text-xs text-cyan-200">
+              <b>Atenção:</b> O arquivo <code>default.conf</code> guarda TODOS os seus sites. Não apague os outros!
+              Adicione este bloco no final.
+            </p>
+          </div>
+
+          <p class="text-sm text-slate-400 mb-2">Configuração completa para <code>java.99dev.pro</code> com Cadeado:</p>
+          <div class="bg-black p-4 rounded-xl border-l-4 border-cyan-500 mb-6 relative">
+            <button onclick="copyToClipboard(document.getElementById('nginxCode').innerText)"
+              class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
+            <pre id="nginxCode" class="text-xs text-slate-300 overflow-x-auto">
+                  # ==========================================
+# SITE 1 (Seu Portal ou Site Principal)
+# ==========================================
+server {
+    listen 80;
+    server_name 99dev.pro www.99dev.pro; # <-- Confirme seu domínio aqui
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        proxy_pass http://site1:80; # Nome do container do site 1
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# ==========================================
+# SITE 2 (Sua API PHP, por exemplo)
+# ==========================================
+server {
+    listen 80;
+    server_name api.99dev.pro;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        proxy_pass http://site2:80; # Nome do container do site 2
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# ==========================================
+# JAVA APP (NOVO - COM CADEADO/SSL)
+# ==========================================
+server {
+    listen 443 ssl;
+    server_name java.99dev.pro;
+
+    # Certificados que geramos
+    ssl_certificate /etc/letsencrypt/live/java.99dev.pro/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/java.99dev.pro/privkey.pem;
+
+    location / {
+        proxy_pass http://app-java:8080; # Nome do container Java
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+# ==========================================
+# REDIRECIONAMENTO JAVA (Forçar HTTPS)
+# ==========================================
 server {
     listen 80;
     server_name java.99dev.pro;
@@ -207,46 +294,51 @@ server {
     }
 
     location / {
-        proxy_pass http://app-java:8080;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
+        return 301 https://$host$request_uri;
     }
-}</pre>
-            </div>
-            
-            <div class="flex flex-col gap-2">
-                 <p class="text-xs text-slate-500 font-bold uppercase">1. Reiniciar o Porteiro:</p>
-                 <code class="bg-slate-950 p-2 rounded text-cyan-400 text-xs border border-slate-800">docker restart porteiro-nginx</code>
-                 <p class="text-xs text-slate-500 font-bold uppercase mt-2">2. Gerar Cadeado (Após DNS propagar):</p>
-                 <code class="bg-slate-950 p-2 rounded text-amber-400 text-xs border border-slate-800">docker run ... (comando certbot) ... -d java.99dev.pro ...</code>
-            </div>
+}
+                </pre>
+          </div>
+
+          <code
+            class="block text-center bg-slate-950 p-2 rounded text-cyan-400 text-xs border border-slate-800">docker exec porteiro-nginx nginx -s reload</code>
         </div>
       </div>
 
       <div id="update" class="border-t border-slate-800 pt-16 mb-12">
         <h2 class="text-3xl font-black text-white mb-8 text-center uppercase italic">Ciclo de Atualização</h2>
-        
-        <div class="bg-gradient-to-r from-green-900/20 to-slate-900 p-8 rounded-3xl border border-green-500/30 relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 opacity-10">
-                <i class="fa-solid fa-arrows-rotate text-6xl text-green-500"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-4">Atualizou o código no Windows?</h3>
-            <p class="text-sm text-slate-400 mb-6">Siga esta sequência exata na VPS para baixar o novo código e recompilar o Java automaticamente:</p>
 
-            <div class="bg-black p-5 rounded-xl border-l-4 border-green-500 relative shadow-2xl">
-                 <button onclick="copyToClipboard(document.getElementById('updateCode').innerText)" class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
-                <pre id="updateCode" class="text-xs text-slate-300 overflow-x-auto font-mono leading-loose">
+        <div
+          class="bg-gradient-to-r from-green-900/20 to-slate-900 p-8 rounded-3xl border border-green-500/30 relative overflow-hidden group hover:border-green-500/50 transition-colors">
+          <div class="absolute top-0 right-0 p-4 opacity-10">
+            <i class="fa-solid fa-arrows-rotate text-6xl text-green-500"></i>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2">Alterou código no PC e deu Git Push?</h3>
+          <p class="text-sm text-slate-400 mb-6">
+            Diferente do PHP ou Node, o Java precisa ser <b>recompilado</b>. Se você só reiniciar, o código velho
+            continua lá. Use esta sequência sagrada:
+          </p>
+
+          <div class="bg-black p-6 rounded-xl border-l-4 border-green-500 relative shadow-2xl">
+            <button onclick="copyToClipboard(document.getElementById('updateCode').innerText)"
+              class="absolute top-4 right-4 text-slate-500 hover:text-white"><i class="fa-regular fa-copy"></i></button>
+            <pre id="updateCode" class="text-xs text-slate-300 overflow-x-auto font-mono leading-loose">
+# 1. Entre na pasta do projeto e baixe as novidades
 cd /root/infra-proxy/java-vps
-
-# 1. Baixa do GitHub
 git pull
 
-# 2. Volta para raiz da infra
+# 2. Volte para a pasta da infra
 cd ..
 
-# 3. Recria SÓ o container Java (Build automático)
+# 3. A MÁGICA: "--build" força a recompilação do Java
 docker compose up -d --build app-java</pre>
-            </div>
+          </div>
+
+          <div class="mt-4 flex items-center gap-2 text-xs text-green-400 bg-green-900/10 p-2 rounded inline-block">
+            <i class="fa-solid fa-check"></i>
+            <span>Isso recria o .jar automaticamente e sobe o novo container.</span>
+          </div>
         </div>
       </div>
 
@@ -257,7 +349,8 @@ docker compose up -d --build app-java</pre>
     </main>
   </div>
 
-  <div id="toast" class="fixed bottom-6 right-6 bg-[#f89820] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+  <div id="toast"
+    class="fixed bottom-6 right-6 bg-[#f89820] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
     <i class="fa-solid fa-check-circle"></i>
     <span>Copiado com sucesso!</span>
   </div>
@@ -284,4 +377,5 @@ docker compose up -d --build app-java</pre>
     }
   </script>
 </body>
+
 </html>
