@@ -4,6 +4,9 @@
 
 * > Subir no seu git
 
+* > test
+.\mvnw.cmd -q test
+
 * > entrar na pasta da vps
 cd /root/infra-proxy
 
